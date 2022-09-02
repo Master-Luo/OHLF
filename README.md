@@ -11,6 +11,9 @@ forklift localization
 
 4).ROS
 
+5)ORB-SLAM3
+https://github.com/UZ-SLAMLab/ORB_SLAM3.git
+
 
 2.Calibrations tool 
 
@@ -45,3 +48,6 @@ https://github.com/stereolabs/zed-ros2-wrapper.git
 
 
 6.Ros_mqtt package
+
+CJSON:
+https://github.com/DaveGamble/cJSON.git
