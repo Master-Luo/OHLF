@@ -1,0 +1,7 @@
+rostopic: /zed2i/zed_node/imu/data
+update_rate: 200.0 #Hz
+ 
+accelerometer_noise_density: 1.3530004069995346e-02 #continous
+accelerometer_random_walk: 4.2028554902885689e-04 
+gyroscope_noise_density: 1.8736601240401561e-03 #continous
+gyroscope_random_walk: 3.9142200038558613e-05
