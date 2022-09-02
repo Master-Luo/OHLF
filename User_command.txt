@@ -1,0 +1,43 @@
+1.SLAM runing
+
+#start ROS
+
+roscore
+
+
+#start ZED camera
+
+source devel/setup.bash
+roslaunch zed_wrapper zed2i.launch
+
+
+#start SLAM
+
+source ~/.bashrc
+
+rosrun ORB_SLAM3 Stereo_pub /home/jetson/SLAM/ORB_SLAM3/Vocabulary/ORBvoc.txt \
+           /home/jetson/SLAM/ORB_SLAM3/Examples/ROS/ORB_SLAM3/src/Zed2i2704.yaml 0 \
+           /camera/left/image_raw:=/zed2i/zed_node/left/image_rect_gray \
+           /camera/right/image_raw:=/zed2i/zed_node/right/image_rect_gray
+
+
+rosrun ORB_SLAM3 Stereo_Inertial home/jetson/SLAM/ORB_SLAM3/Vocabulary/ORBvoc.txt \
+           /home/jetson/SLAM/ORB_SLAM3/Examples/ROS/ORB_SLAM3/src/Zed2i_2704.yaml 0 \
+           /camera/left/image_raw:=/zed2i/zed_node/left/image_rect_gray \
+           /camera/right/image_raw:=/zed2i/zed_node/right/image_rect_gray \
+           /imu:=/zed2i/zed_node/imu/data
+
+
+
+#start mqtt-publish
+
+source devel/setup.bash
+roslaunch roscommunication rosc.launch
+
+
+2.evo command
+
+cd test/data
+evo_traj kitti KITTI_xxx.txt -p --plot_mode=xz
+
+evo_traj tum TUM_xxx.txt -p --plot_mode=xz
