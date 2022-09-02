@@ -16,13 +16,13 @@ roslaunch zed_wrapper zed2i.launch
 source ~/.bashrc
 
 rosrun ORB_SLAM3 Stereo_pub /home/jetson/SLAM/ORB_SLAM3/Vocabulary/ORBvoc.txt \
-           /home/jetson/SLAM/ORB_SLAM3/Examples/ROS/ORB_SLAM3/src/Zed2i2704.yaml 0 \
+           /home/jetson/SLAM/ORB_SLAM3/Examples/ROS/ORB_SLAM3/src/Zed2_i2704.yaml 0 \
            /camera/left/image_raw:=/zed2i/zed_node/left/image_rect_gray \
            /camera/right/image_raw:=/zed2i/zed_node/right/image_rect_gray
 
 
 rosrun ORB_SLAM3 Stereo_Inertial home/jetson/SLAM/ORB_SLAM3/Vocabulary/ORBvoc.txt \
-           /home/jetson/SLAM/ORB_SLAM3/Examples/ROS/ORB_SLAM3/src/Zed2i_2704.yaml 0 \
+           /home/jetson/SLAM/ORB_SLAM3/Examples/ROS/ORB_SLAM3/src/Zed2i_inertial.yaml 0 \
            /camera/left/image_raw:=/zed2i/zed_node/left/image_rect_gray \
            /camera/right/image_raw:=/zed2i/zed_node/right/image_rect_gray \
            /imu:=/zed2i/zed_node/imu/data
