@@ -1,0 +1,15 @@
+-I/home/jetson/SLAM/Thirdparty/opencv-4.4.0/build/3rdparty/ippicv/ippicv_lnx/icv/include
+-I/home/jetson/SLAM/Thirdparty/opencv-4.4.0/build/3rdparty/ippicv/ippicv_lnx/iw/include
+-I/home/jetson/SLAM/Thirdparty/opencv-4.4.0/build
+-I/usr/include/x86_64-linux-gnu
+-I/home/jetson/SLAM/Thirdparty/opencv-4.4.0/modules/highgui
+-I/home/jetson/SLAM/Thirdparty/opencv-4.4.0/build/modules/highgui
+-D__OPENCV_BUILD=1
+-D_USE_MATH_DEFINES
+-D__STDC_CONSTANT_MACROS
+-D__STDC_LIMIT_MACROS
+-D__STDC_FORMAT_MACROS
+-DHAVE_WEBP
+-o
+/home/jetson/SLAM/Thirdparty/opencv-4.4.0/build/modules/highgui/src/moc_window_QT.cpp
+/home/jetson/SLAM/Thirdparty/opencv-4.4.0/modules/highgui/src/window_QT.h

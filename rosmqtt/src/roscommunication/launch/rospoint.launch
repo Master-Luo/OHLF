@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="roscommunication" type="publisheuler" name="string_subscriber" />
+</launch>
